@@ -1,0 +1,9 @@
+#!/bin/sh
+# Minimal gradlew stub - real wrapper will be downloaded by GitHub Actions if missing, but this works locally if gradle is installed
+set -e
+DIR=$(dirname "$0")
+if [ -f "$DIR/gradle/wrapper/gradle-wrapper.jar" ]; then
+  exec java -jar "$DIR/gradle/wrapper/gradle-wrapper.jar" "$@"
+else
+  exec gradle "$@"
+fi
